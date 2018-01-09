@@ -62,7 +62,7 @@ exports = module.exports = function(req, res) {
 		keystone.list('User').model.find().exec(function (err, feedback) {
 			if(req.user){
 				locals.data.currentUser = req.user;
-				locals.data.currentUser.description = locals.data.currentUser.description.replace(/(<([^>]+)>)/ig,"");
+				// locals.data.currentUser.description = locals.data.currentUser.description.replace(/(<([^>]+)>)/ig,"");
 				if (err || !feedback.length) return next(err);
 				//loop through each product
 				locals.data.users = feedback;
