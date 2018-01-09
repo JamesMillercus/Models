@@ -1,0 +1,85 @@
+extends ../layouts/sketchfab
+
+block intro
+	.container
+		// h1#h1header Audiences
+
+block content
+	if user
+		#loadingScreen
+			.slantedCorner
+			.slantedHeight
+			.loadingContainer
+				.loadingCenter
+					h1.loadingText 
+						span.headerFirstText Loading 
+						span.headerSecondText your
+						span.modelsText
+							.modelsLogo
+							span.hiddenChar m
+							span.revealdChars odels
+							.loadingLogos
+								.modelsLogo.logo1
+								.modelsLogo.logo2
+								.modelsLogo.logo3
+		.navBar
+			.navContainer
+				img(src=locals.data.currentUser.image.url).clientLogo
+				.momoLogoContainer
+					.modelsLogo
+					.logoText
+						span.hiddenChar m
+						|odels
+				.buttons
+					a(href='/signout').button.signoutButton
+					// .details
+			// h1.user= locals.data.currentUser.name.first + " " + locals.data.currentUser.name.last
+		// .popUp
+		// 	p.description= locals.data.currentUser.description
+		#sketchContainer
+			// .sectionContainer#sectionContainer1
+
+		if locals.data
+			each audience in locals.data.active
+				p.name= audience.slug
+				p.url= audience.url
+				p.link= audience.slug
+	else
+		.pageContainer
+			.backgroundImage
+			.loginarea
+				.loginbox
+					.logindetails
+						.logo
+							.modelsLogo
+							.logoText
+								span.hiddenChar m
+								| odels
+						.descriptionText
+							p.firstParagraph The service that allows Momentum Worldwide to share 3D models with you.
+							p.secondParagraph Please enter your log in details below.
+						form(method='post',role='signin').signin-form
+							input(type='hidden', autocomplete="off", name='action', value='signin')
+							.form-control-box
+								.userInput
+									// label(for='hidden-email').sr-only Email
+									input(type='email', autocomplete="off", name='signin_email', placeholder='Enter your email address here', id='hidden-username', value=signin_email)
+									.inputBackground
+									// input(autocomplete="off", type='email', name='signin_email', placeholder='Enter your email address here', id='hidden-email', value=signin_email).form-control
+								.passwordInput
+									// label(for='hidden-password').sr-only Password
+									input(type='text', style='opacity: 0').hideForm
+									input(type='password', autocomplete="off", name='signin_password', placeholder='Enter your supplied password here', id='hidden-password', value='')
+									.inputBackground
+									// input(autocomplete="off", type='password', name='signin_password', placeholder='Enter your supplied password here', id='hidden-password', value='').form-control
+							.bottomButtons
+								label.checkBox
+									input(type='checkbox', name='logDetails').inputBox
+									.checkBoxText Remember me
+								button(type='submit').submitBtn Log in
+					.loginBackground
+
+
+block js
+	script(src='/js/bundle.min.js')
+								

@@ -1,0 +1,1168 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  letter-spacing: .1px;
+  color: white;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: inset 0px 1000px 0px #ebebeb;
+}
+
+#h1header {
+  color: white;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+}
+
+#singleContainer {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  float: left;
+  display: inline-block;
+  background-color: black;
+  opacity: .8;
+  color: white;
+}
+
+#singleContainer h1,
+#singleContainer p {
+  /*float: left;*/
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+#singleContainer p a {
+  /*position:absolute;
+	bottom:0px;*/
+  margin-left: 10px;
+}
+
+#email,
+#username {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.logo {
+  margin-top: 5%;
+  width: 204px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  text-align: right;
+}
+
+.onlyModel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  z-index: 0;
+  border: 0;
+}
+
+.twinModel {
+  width: 50%;
+  height: 105%;
+  margin: 0;
+  z-index: 0;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+}
+
+.headerModel {
+  width: 100%;
+}
+
+/*.overlay {
+	z-index: 100;
+	width:100%;
+	height:100%;
+
+}*/
+
+.linkContainer {
+  display: inline-block;
+}
+
+.link {
+  display: none;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: none;
+}
+
+.scrollOver {
+  /*display:inline-block;*/
+  height: 102%;
+  width: 102%;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  opacity: .5;
+}
+
+.scrollOver:hover {
+  opacity: .0;
+}
+
+#sketchContainer {
+  width: 100%;
+  height: 75%;
+  position: fixed;
+  z-index: 0;
+  min-width: 1200px;
+  min-height: 490px;
+  bottom: 6.5%;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+}
+
+.sectionContainer {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.url {
+  display: none;
+}
+
+#loadingScreen {
+  background-color: #f90b7d;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+.commentFormContainer {
+  width: 300px;
+  right: -300px;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  min-height: 490px;
+  /*top: 70px;*/
+  bottom: 0px;
+  z-index: 1;
+  /*display:none;*/
+}
+
+.commentFormContainerBackground {
+  background-color: #f90b7d;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.formInput {
+  width: 260px;
+  height: 30px;
+  /* background-color: white; */
+  position: absolute;
+  bottom: 66px;
+  z-index: 1;
+}
+
+.formFeedback {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  padding-top: 9px;
+  border: 0px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  resize: none;
+  padding-bottom: 5px;
+}
+
+.formFeedback::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white;
+}
+
+.formFeedback::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+
+.formFeedback:-ms-input-placeholder {
+  /* IE 10+ */
+  color: white;
+}
+
+.formFeedback:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+}
+
+.formFeedbackBackground {
+  background-color: black;
+  opacity: .45;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.submitForm {
+  right: 20px;
+}
+
+.messageForm {
+  position: absolute;
+  background-color: #ebebeb;
+  border: 0px;
+  border-radius: 2px;
+  width: 80px;
+  height: 34px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #343e48;
+  z-index: 1;
+  bottom: 20px;
+}
+
+.messageForm:hover {
+  background-color: #d3d3d3;
+}
+
+.cancelForm {
+  right: 120px;
+}
+
+.formLayout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#email {
+  display: none;
+}
+
+.accountInfo {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.description {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+.title {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #343e48;
+  background-color: #ebebeb;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  bottom: 0px;
+  box-shadow: inset 0px -2px 5px #bdbcbc;
+}
+
+.backgroundImage {
+  width: 120%;
+  z-index: -1;
+  position: fixed;
+  background-image: url("../../images/3d.jpg");
+  opacity: .5;
+  height: 110%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-width: 1200px;
+  min-height: 750px;
+}
+
+.pageContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -2;
+  background-color: black;
+  overflow: hidden;
+}
+
+.loginarea {
+  width: 40%;
+  height: 100%;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.loginarea .loginbox,
+.loginBackground {
+  width: 100%;
+  height: auto;
+  /*height:40%;*/
+  /*min-height: 355px;*/
+  display: block;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  z-index: -1;
+  max-width: 450px;
+}
+
+.loginarea .loginbox {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.loginBackground {
+  background-color: #F90B7D;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+}
+
+.logindetails {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  display: block;
+  height: 100%;
+  max-width: 330px;
+  /*display:none;*/
+  overflow: hidden;
+}
+
+.signin-form {
+  top: 4%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10%;
+}
+
+.form-control-box input,
+select {
+  /*height:100px;*/
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  height: 34px;
+  border: 0px;
+  border-radius: 2px;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-control-box input::-webkit-input-placeholder {
+  color: white;
+}
+
+.inputBackground {
+  background-color: black;
+  opacity: .45;
+  height: 34px;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.hideForm {
+  position: absolute;
+  left: -100000000000000000000012345678910px;
+  z-index: -1000;
+}
+
+.userInput {
+  display: block;
+  /*background-color:blue;*/
+  height: 34px;
+}
+
+.passwordInput {
+  margin-top: 5px;
+  /*background-color:red;*/
+  height: 34px;
+  display: block;
+}
+
+.checkBox {
+  display: inline-block;
+  float: left;
+  margin-top: 3px;
+}
+
+.submitBtn {
+  background-color: #ebebeb;
+  border: 0px;
+  border-radius: 2px;
+  float: right;
+  width: 80px;
+  height: 34px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #343e48;
+}
+
+.submitBtn:hover {
+  background-color: #d3d3d3;
+}
+
+.bottomButtons {
+  margin-top: 15px;
+  height: 34px;
+}
+
+.checkBox input {
+  display: inline-block;
+  margin-top: -0px;
+  margin-left: 5px;
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5);
+  /* IE */
+  -moz-transform: scale(1.5);
+  /* FF */
+  -webkit-transform: scale(1.5);
+  /* Safari and Chrome */
+  -o-transform: scale(1.5);
+  /* Opera */
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: inset 0px 1000px 0px #ebebeb;
+}
+
+.checkBox input:before {
+  box-shadow: inset 0px 1000px 0px #ebebeb;
+}
+
+.checkBox input:after {
+  box-shadow: inset 0px 1000px 0px rgba(235, 235, 235, 0);
+}
+
+.checkBoxText {
+  margin-left: 10px;
+  display: inline-block;
+  color: white;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.modelsLogo {
+  background-image: url("../../images/momoLogo.png");
+  width: 60px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+  margin-top: 18px;
+  position: absolute;
+  margin-left: -13px;
+}
+
+.logoText {
+  font-size: 56px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  margin-left: -8px;
+}
+
+.firstParagraph {
+  margin-top: 5%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.secondParagraph {
+  font-size: 18px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.clientLogo {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navBar {
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  height: 70px;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: absolute;
+  min-width: 1200px;
+}
+
+.navContainer {
+  height: 35px;
+  width: 100%;
+  display: block;
+  top: 25%;
+  position: relative;
+  /*background-color: green;*/
+}
+
+.buttons a,
+.buttons div {
+  height: 100%;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-position: 0px 0px;
+  opacity: .6;
+  float: right;
+  margin-left: 30px;
+}
+
+.homeBtn {
+  background-image: url("../../images/homeButton.png");
+}
+
+.signoutButton {
+  background-image: url("../../images/logoutButton.png");
+}
+
+.commentButton {
+  background-image: url("../../images/writeMessageButton.png");
+  cursor: pointer;
+}
+
+.details {
+  background-image: url("../../images/details.png");
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.buttons a:hover,
+.buttons div:hover {
+  background-position: 0px -35px;
+  opacity: 1;
+}
+
+.hiddenChar {
+  font-size: 0px;
+  letter-spacing: 51px;
+}
+
+.buttons {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btnContainer {
+  z-index: 2;
+  position: absolute;
+}
+
+.momoLogoContainer {
+  width: 87px;
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 2px;
+  padding-left: 7px;
+  border-top: 2px solid #343e48;
+  border-bottom: 2px solid #343e48;
+}
+
+.momoLogoContainer .modelsLogo {
+  width: 27px;
+  margin-top: 8px;
+  margin-left: -10px;
+  background-image: url("../../images/momoHeader.png");
+  z-index: 2;
+}
+
+.momoLogoContainer .logoText {
+  color: #343e48;
+  font-size: 24px;
+  letter-spacing: .5px;
+  line-height: 1.1;
+  float: right;
+}
+
+.momoLogoContainer .hiddenChar {
+  letter-spacing: 24px;
+  font-size: 0px;
+  color: white;
+  opacity: 1;
+}
+
+.linkID {
+  width: 49%;
+  margin-left: .5%;
+  margin-right: .5%;
+  overflow: hidden;
+}
+
+.oddModel {
+  width: 99%;
+  height: 105%;
+  margin: 0;
+  z-index: 0;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+  margin-left: .5%;
+  margin-right: .5%;
+  overflow: hidden;
+}
+
+.momoModelLogoContainer {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.momoModelLogo {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  position: relative;
+  background-color: #343e48;
+  background-image: url("../../images/momoLogo.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 22px 38px;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 5px solid white; */
+}
+
+.multimodel {
+  margin-top: -9%;
+}
+
+.multiOddmodel {
+  margin-top: -30px;
+}
+
+.multiSectionContainers {
+  width: 50%;
+  float: left;
+}
+
+.multimodelIframeHeight {
+  margin-top: -80px;
+}
+
+.singleLinkID {
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.momoModelLogoSingleContainer {
+  margin-top: 15%;
+}
+
+.singleStyleContainer {
+  top: 0px;
+  bottom: 0px !important;
+  height: 100% !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.momoModelSingleLogoContainer {
+  bottom: 10px;
+  left: 10px;
+  width: 35px;
+  height: 35px;
+  /*position:fixed;*/
+}
+
+.momoModelSingleLogo {
+  width: 38px;
+  height: 38px;
+  background-position: 5px 12px;
+  background-size: 90%;
+}
+
+#body {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+#modelname {
+  z-index: 1;
+  opacity: 1;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.noMessage {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.newMessageBox {
+  z-index: 1;
+  min-height: 54px;
+  position: relative;
+  width: 100%;
+}
+
+.newMessageBackground {
+  background-color: black;
+  opacity: .45;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.newMessage {
+  position: absolute;
+  z-index: 1;
+  padding: 15px;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  font-size: 12px;
+}
+
+.commentLogo {
+  width: 30%;
+  position: relative;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.messageTriangle {
+  width: 0;
+  height: 0;
+  border: solid 10px;
+  border-color: transparent transparent black transparent;
+  opacity: .45;
+  margin-left: 20px;
+}
+
+.loadingContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.loadingCenter {
+  width: 100%;
+  top: 45%;
+  position: absolute;
+}
+
+.loadingCenter .modelsLogo {
+  width: 56px;
+  height: 45px;
+  top: 27px;
+  margin-top: 0;
+  margin-left: 0;
+  display: inline-block;
+}
+
+.loadingText {
+  font-size: 56px;
+  font-weight: bold;
+  width: 670px;
+  line-height: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.loadingText .hiddenChar {
+  letter-spacing: 52px;
+  width: 52px;
+  height: 52px;
+  display: inline-block;
+  line-height: 0;
+}
+
+.revealdChars {
+  font-size: 56px;
+  line-height: initial;
+}
+
+.loadingLogos .modelsLogo {
+  display: inline-block;
+  width: 15px;
+  margin: 0;
+  height: 15px;
+  position: relative;
+  float: left;
+  bottom: 0;
+  top: 0;
+  border-radius: 100px;
+  background-position: 3px 5px;
+  background-size: 90%;
+  margin-left: 10px;
+  background-color: white;
+  background-image: url("../../images/momoPinkLogo.png");
+  opacity: 0;
+  -webkit-animation-name: fader;
+  -webkit-animation-duration: 5s;
+  /*-webkit-animation-delay: 2s;*/
+  animation-name: fader;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.headerFirstText {
+  /*opacity:0;*/
+}
+
+.headerSecondText {
+  /*opacity:0;	*/
+}
+
+.modelsText {
+  padding-left: 10px;
+  width: 315px;
+  height: 100%;
+  display: inline-block;
+}
+
+.loadingLogos {
+  /*right: 10px;*/
+  position: relative;
+  width: 90px;
+  height: 15px;
+  display: inline-block;
+}
+
+.loadingLogos .logo1 {
+  /*background-color: #f3e844;*/
+  animation-delay: .5s;
+}
+
+.loadingLogos .logo2 {
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+.loadingLogos .logo3 {
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes fader {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes fader {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.slantedCorner {
+  width: 0;
+  height: 0;
+  border-bottom: 300px solid #f90b7d;
+  border-left: 300px solid transparent;
+  margin-left: -300px;
+  position: absolute;
+  top: 0;
+}
+
+.slantedHeight {
+  position: absolute;
+  width: 300px;
+  height: 90%;
+  margin-left: -300px;
+  background-color: #f90b7d;
+  top: 300px;
+}
