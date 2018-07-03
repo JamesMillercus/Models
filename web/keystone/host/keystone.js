@@ -12,12 +12,11 @@ var keystone = require('keystone');
 keystone.init({
 	'name': 'Keystone',
 	'brand': 'Keystone',
-	'sass': '../client/build',
-	'static': '../client/build',
-	'favicon': '../client/build/favicon.ico',
+	'sass': './../client/build',
+	'static': './../client/build',
+	'favicon': './../client/build/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-	'host':'127.0.0.1',
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -26,7 +25,8 @@ keystone.init({
 	'session store options': {
 		"host": 'redis', // Redis server hostname
 		"port": '6379', // Redis server port
-		"ttl": '260',
+		"ttl": '1209600',
+		"pass": 'keystone'
 	}
 });
 

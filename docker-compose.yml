@@ -8,19 +8,25 @@ services:
       - keystone
   keystone:
     build: ./web/keystone
-    volumes:
-      - "./web/keystone:/usr/src/app"
-    env_file: ./web/mongo/.env
-    command: gulp
-    ports:
-      - "3000:3000"
-      - "4000:4000"
+    env_file: ./web/keystone/.env
+    # ports:
+    #   - "3000:3000"
+    # volumes:
+    #   - "./web/keystone:/usr/src/app"
+    # command: npm start
+    depends_on:
+      - mongodb
+      - redis
   mongodb:
+    env_file: ./web/mongo/.env
     image: mongo:latest
     volumes:
       - "./web/mongo/data/db:/data/db/"
   redis:
     image: "redis:alpine"
+    volumes:
+      - "./web/redis/redis.conf:/usr/local/etc/redis/redis.conf"
+    command: redis-server /usr/local/etc/redis/redis.conf
 
   # command: bash -c "npm update && npm install"
     
