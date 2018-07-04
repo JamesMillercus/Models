@@ -1,6 +1,6 @@
 // Simulate config options from your production environment by
 // customising the .env file in your project's root folder.
-require('dotenv').config();
+require('./config/keys');
 
 // Require keystone
 var keystone = require('keystone');
@@ -23,10 +23,10 @@ keystone.init({
 	'user model': 'User',
 	'session store': 'connect-redis',
 	'session store options': {
-		"host": 'redis', // Redis server hostname
-		"port": '6379', // Redis server port
-		"ttl": '1209600',
-		"pass": 'keystone'
+		"host": process.env.REDIS_HOST, // Redis server hostname
+		"port": process.env.REDIS_PORT, // Redis server port
+		"ttl": process.env.REDIS_TTL,
+		"pass": process.env.REDIS_PASSWORD
 	}
 });
 

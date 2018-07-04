@@ -3,6 +3,9 @@ var async = require('async'),
 
 var Post = keystone.list('Audience'),
 	nodemailer = require('nodemailer');
+
+require('./../../config/keys');
+
 /**
  * List Posts
  */
@@ -22,8 +25,6 @@ exports.list = function(req, res) {
  * Get Post by ID
  */
 exports.get = function(req, res) {
-	console.log("params = ");
-	console.log(req.params.id);
 	Post.model.find({ title: req.params.id}).exec(function(err, item) {
 		
 		if (err) return res.apiError('database error', err);
@@ -75,8 +76,8 @@ function email(user, email, model, message){
 	    secure: false, // TLS requires secureConnection to be false
 	    port: 25, // port for secure SMT
 	    auth: {
-	        user: 'momomodels99@gmail.com',
-	        pass: 'Momentum99'
+	        user: process.env.EMAIL_USERNAME,
+	        pass: process.env.EMAIL_PASSWORD
 	    },
 	    tls: {
 	    	rejectUnauthorized: false
@@ -85,7 +86,7 @@ function email(user, email, model, message){
 
 	// setup email data with unicode symbols
 	var mailOptions = {
-	    from: '"Models Sketchfab CMS 👻" <james.miller@momentumww.com>', // sender address
+	    from: '"Momentum Models"', // sender address
 	    to: email, // list of receivers 
 	    subject: 'Momo Sketchfab CMS Update', // Subject line
 	    html: '<p> ' + user + ' has updated their feed back on ' + model + ': ' + message +'</p>' // html body
