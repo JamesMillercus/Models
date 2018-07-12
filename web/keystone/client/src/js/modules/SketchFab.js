@@ -63,12 +63,12 @@ export class SketchfabModel{
 				api.start();
 				api.addEventListener( 'viewerready', function() {
 					// API is ready to use
-					console.log( 'Viewer is ready' );
+					// console.log( 'Viewer is ready' );
 					if($("iframe").length == 1) loadingScreen();
 				});
 			},
 			error: function onError() {
-				console.log( 'Viewer error' );
+				// console.log( 'Viewer error' );
 			}
 		} );
 	}

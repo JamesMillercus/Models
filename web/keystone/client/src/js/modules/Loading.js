@@ -98,7 +98,7 @@ export function activateForm(description) {
 		   data: { details, user, email },
 		   url: "/api/post/"+modelID+"/update",
 		   success: function(data){        
-		     console.log("email(data.postOne.description)");
+		     // console.log("email(data.postOne.description)");
 			 $(".formFeedback").val("");
 		   }
 		});

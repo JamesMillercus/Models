@@ -123,14 +123,14 @@ function singleStyle() {
 	activateForm(description);
 
 	$( ".commentButton" ).click( function() {
-		console.log("start again?");
+		// console.log("start again?");
 		if($('.commentFormContainer').css('opacity') == 0) {
-			console.log("REVEAL NOW");
+			// console.log("REVEAL NOW");
 			//.stop.animate
 			$( ".commentFormContainer" ).stop().animate({ "right" : 0, "opacity": 1, "z-index":5});
 		}
 		else {
-			console.log("HIDE NOW!");
+			// console.log("HIDE NOW!");
 			$( ".commentFormContainer" ).stop().animate({ "right" : - $( ".commentFormContainer" ).width(), "opacity": 0});
 		} 
 	}); 

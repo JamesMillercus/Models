@@ -13,7 +13,7 @@ export function loginFunctions(){
 
 	$('.inputBox').click(function() {
 		$(".inputBox").toggle(this.checked);
-		console.log("this.checked");
+		// console.log("this.checked");
 		if(this.checked) {
 			$('#hidden-username, #hidden-password').attr("autocomplete", "on");
 			$(".inputBox").css({ boxShadow : "0 0 5px 3px rgba(100,100,200,0)" });
