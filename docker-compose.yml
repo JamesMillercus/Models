@@ -10,10 +10,10 @@ services:
     build: ./web/keystone
     ports:
       - "3000:3000"
-      - "4000:4000"
-    volumes:
-      - "./web/keystone:/usr/src/app"
-    command: npm run dev
+    #   - "4000:4000"
+    # volumes:
+    #   - "./web/keystone:/usr/src/app"
+    # command: npm run dev
     depends_on:
       - mongodb
       - redis

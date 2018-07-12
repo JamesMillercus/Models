@@ -1,0 +1,55 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        type: db
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        env:
+        - name: AUTH
+          value: "yes"
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sketchfab-cms-secrets
+              key: MONGO_INITDB_ROOT_PASSWORD
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: sketchfab-cms-secrets
+              key: MONGO_INITDB_ROOT_USERNAME
+        image: mongo:latest
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongodb
+          mountPath: /data/db
+      restartPolicy: Always
+      nodeSelector:
+        type: database
+      volumes:
+      - name: mongodb
+        hostPath:
+          path: /mnt/k8-databases/mongo/data/db
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  labels:
+    run: mongodb
+spec:
+  type: NodePort
+  ports:
+  - port: 27017
+    protocol: TCP
+    name: http
+  selector:
+    app: mongodb

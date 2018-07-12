@@ -1,0 +1,83 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: keystone-deployment
+spec:
+  replicas: 1 # We want two pods for this deployment
+  template:
+    metadata:
+      labels:
+        app: keystone
+    spec:
+      containers:
+      - name: keystone
+        env:
+          - name: NODE_ENV
+            value: 'production'
+          - name: COOKIE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: sketchfab-cms-secrets
+                key: COOKIE_SECRET
+          - name: CLOUDINARY_URL
+            valueFrom:
+              secretKeyRef:
+                name: sketchfab-cms-secrets
+                key: CLOUDINARY_URL
+          - name: MONGO_URI
+            valueFrom:
+              secretKeyRef:
+                name: sketchfab-cms-secrets
+                key: MONGO_URI
+          - name: EMAIL_USERNAME
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: EMAIL_USERNAME
+          - name: EMAIL_PASSWORD
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: EMAIL_PASSWORD
+          - name: REDIS_PORT
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: REDIS_PORT
+          - name: REDIS_HOST
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: REDIS_HOST
+          - name: REDIS_PASSWORD
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: REDIS_PASSWORD
+          - name: REDIS_TTL
+            valueFrom:
+                secretKeyRef:
+                  name: sketchfab-cms-secrets
+                  key: REDIS_TTL
+        image: simuha999/sketchfab-cms
+        ports:
+        - containerPort: 3000
+      restartPolicy: Always
+      nodeSelector:
+        type: application
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keystone-service
+  labels:
+    run: keystone
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+    protocol: TCP
+    name: http
+  selector:
+    app: keystone
+    
